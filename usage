@@ -1,1 +1,6 @@
-[x-hackerrank] Just another code checker. which checks your code on cloud right through your terminal
+[x-hackerrank] 
+	Hi, i am just another code checker just like your gcc.
+	I can speculate your program by the testcases that you
+	give to me, i.e i can inform you of its memory usage,
+	time, errors etc,..
+	I retrieve those results from cloud (by Hackerrank API).
