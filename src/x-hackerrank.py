@@ -4,14 +4,16 @@ import sys
 import colorama
 import requests
 import json
+from define import *
 url = 'POST http://api.hackerrank.com/checker/submission.json'
 about = open("../usage", "r")
 parser = argparse.ArgumentParser(description=about.read())
 parser.add_argument('-s',
 					'--source-code', 
 					dest='source', 
-					metavar = 'sourutce code', 
+					metavar = 'source code', 
 					type=argparse.FileType('r'), 
+					required=True,
 					help='source-code file')
 parser.add_argument('-i', 
 					'--input-tests',
@@ -24,6 +26,11 @@ parser.add_argument('-o',
 					dest='output', 
 					default=sys.stdout, 
 					type=argparse.FileType('w'), 
+					help='Output file')
+parser.add_argument('-l', 
+					'--lang', 
+					dest='lang', 
+					default='C++',
 					help='Output file')
 args = parser.parse_args()
 
